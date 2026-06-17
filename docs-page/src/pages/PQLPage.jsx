@@ -86,8 +86,8 @@ df_emp = model.predict(query, indices=employees["employeeID"].tolist())`}
           <h2>4. Mortality - MIMIC-III</h2>
           <p>
             With a properly linked clinical graph (see{" "}
-            <a href="/local-graph">Building a LocalGraph</a>) you can ask
-            binary-outcome questions on derived target columns:
+            <a href="/kumorfm-evaluation/local-graph">Building a LocalGraph</a>)
+            you can ask binary-outcome questions on derived target columns:
           </p>
           <CodeBlock
             code={`icustays_df["died_within_48h"] = (
@@ -116,8 +116,9 @@ high_risk = df[df["True_PROB"] > 0.7].sort_values("True_PROB", ascending=False)`
           />
 
           <p>
-            See <a href="/limits">Rate Limits &amp; Tips</a> for what to expect
-            when you push the free tier with batch predictions.
+            See <a href="/kumorfm-evaluation/limits">Rate Limits &amp; Tips</a>{" "}
+            for what to expect when you push the free tier with batch
+            predictions.
           </p>
         </main>
       </div>

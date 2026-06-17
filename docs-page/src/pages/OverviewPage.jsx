@@ -45,30 +45,37 @@ function OverviewPage() {
           <h2>Start here</h2>
           <ul>
             <li>
-              <a href="/getting-started">
+              <a href="/kumorfm-evaluation/getting-started">
                 Install <code>kumoai</code> and initialize the SDK
               </a>{" "}
               with your API key.
             </li>
             <li>
-              <a href="/connect-bigquery">Connect to BigQuery</a> and load
-              tables from the PhysioNet public datasets.
+              <a href="/kumorfm-evaluation/connect-bigquery">
+                Connect to BigQuery
+              </a>{" "}
+              and load tables from the PhysioNet public datasets.
             </li>
             <li>
-              <a href="/local-graph">Build a LocalGraph</a> — declare primary
-              keys, link foreign keys, visualize the ER diagram.
+              <a href="/kumorfm-evaluation/local-graph">Build a LocalGraph</a> —
+              declare primary keys, link foreign keys, visualize the ER diagram.
             </li>
             <li>
-              <a href="/predictions">Ask predictive questions</a> with PQL:
-              churn, freight forecast, mortality risk.
+              <a href="/kumorfm-evaluation/predictions">
+                Ask predictive questions
+              </a>{" "}
+              with PQL: churn, freight forecast, mortality risk.
             </li>
           </ul>
           <h2>The companion PDF</h2>
           <p>
-            The <a href="/playground">RFM Playground — E-commerce</a> page wraps
-            the official Kumo PDF walkthrough that ships alongside this project.
-            Use it as a guided tour of the playground UI before opening the
-            notebooks.
+            The{" "}
+            <a href="/kumorfm-evaluation/playground">
+              RFM Playground — E-commerce
+            </a>{" "}
+            page wraps the official Kumo PDF walkthrough that ships alongside
+            this project. Use it as a guided tour of the playground UI before
+            opening the notebooks.
           </p>
           <h2>Datasets covered</h2>
           <div className="not-prose grid sm:grid-cols-2 gap-3 my-6">
@@ -131,7 +138,7 @@ function OverviewPage() {
           </div>
           <p className="!text-sm !text-muted-foreground">
             Source notebooks are downloadable from the{" "}
-            <a href="/notebooks">Notebooks</a> page.
+            <a href="/kumorfm-evaluation/notebooks">Notebooks</a> page.
           </p>
         </main>
       </div>

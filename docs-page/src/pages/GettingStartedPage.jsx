@@ -63,10 +63,13 @@ df = model.predict(
 )'
           ></CodeBlock>
           <p>
-            Continue to <a href="/connect-bigquery">Connect to BigQuery</a> for
-            loading real datasets, or jump to{" "}
-            <a href="/predictions">Predictions &amp; PQL</a> for the query
-            syntax.
+            Continue to{" "}
+            <a href="/kumorfm-evaluation/connect-bigquery">
+              Connect to BigQuery
+            </a>{" "}
+            for loading real datasets, or jump to{" "}
+            <a href="/kumorfm-evaluation//predictions">Predictions &amp; PQL</a>{" "}
+            for the query syntax.
           </p>
         </main>
       </div>

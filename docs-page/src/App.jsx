@@ -12,17 +12,38 @@ import NotebookPage from "./pages/NotebookPage";
 function App() {
   return (
     <>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<OverviewPage />} />
-          <Route path="/getting-started" element={<GettingStartedPage />} />
-          <Route path="/playground" element={<RFMPlaygroundPage />} />
-          <Route path="/connect-bigquery" element={<ConnectBigQuery />} />
-          <Route path="/local-graph" element={<BuildingLocalGraphPage />} />
-          <Route path="/predictions" element={<PQLPage />} />
-          <Route path="/limits" element={<RateLimitsPage />} />
-          <Route path="/notebooks" element={<AllNotebooksPage />} />
-          <Route path="/notebooks/:slug" element={<NotebookPage />} />
+          <Route path="/kumorfm-evaluation" element={<OverviewPage />} />
+          <Route
+            path="/kumorfm-evaluation/getting-started"
+            element={<GettingStartedPage />}
+          />
+          <Route
+            path="/kumorfm-evaluation/playground"
+            element={<RFMPlaygroundPage />}
+          />
+          <Route
+            path="/kumorfm-evaluation/connect-bigquery"
+            element={<ConnectBigQuery />}
+          />
+          <Route
+            path="/kumorfm-evaluation/local-graph"
+            element={<BuildingLocalGraphPage />}
+          />
+          <Route path="/kumorfm-evaluation/predictions" element={<PQLPage />} />
+          <Route
+            path="/kumorfm-evaluation/limits"
+            element={<RateLimitsPage />}
+          />
+          <Route
+            path="/kumorfm-evaluation/notebooks"
+            element={<AllNotebooksPage />}
+          />
+          <Route
+            path="/kumorfm-evaluation/notebooks/:slug"
+            element={<NotebookPage />}
+          />
         </Routes>
       </BrowserRouter>
     </>
