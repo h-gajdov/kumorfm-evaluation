@@ -1,0 +1,126 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-warn: var(--warn);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-code-bg: var(--code-bg);
+  --color-code-fg: var(--code-fg);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.005 240);
+  --foreground: oklch(0.18 0.03 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.03 250);
+  --muted: oklch(0.95 0.01 240);
+  --muted-foreground: oklch(0.5 0.02 250);
+  --border: oklch(0.9 0.01 240);
+  --primary: oklch(0.55 0.18 195); /* teal */
+  --primary-foreground: oklch(0.99 0 0);
+  --accent: oklch(0.65 0.22 25); /* coral accent */
+  --accent-foreground: oklch(0.99 0 0);
+  --sidebar: oklch(0.22 0.04 255);
+  --sidebar-foreground: oklch(0.88 0.01 240);
+  --sidebar-border: oklch(0.3 0.04 255);
+  --code-bg: oklch(0.2 0.035 255);
+  --code-fg: oklch(0.92 0.02 180);
+  --warn: #ffecea;
+}
+
+.dark {
+  --background: oklch(0.16 0.03 255);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.22 0.04 255);
+  --card-foreground: oklch(0.95 0.01 240);
+  --muted: oklch(0.25 0.03 255);
+  --muted-foreground: oklch(0.7 0.02 240);
+  --border: oklch(0.3 0.03 255);
+  --primary: oklch(0.7 0.18 195);
+  --primary-foreground: oklch(0.15 0.03 255);
+  --accent: oklch(0.7 0.2 25);
+  --accent-foreground: oklch(0.15 0.03 255);
+  --sidebar: oklch(0.13 0.03 255);
+  --sidebar-foreground: oklch(0.88 0.01 240);
+  --sidebar-border: oklch(0.22 0.04 255);
+  --code-bg: oklch(0.13 0.03 255);
+  --code-fg: oklch(0.9 0.02 180);
+  --warn: #0d162b;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { font-family: var(--font-sans); }
+  body { background-color: var(--color-background); color: var(--color-foreground); }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  code, pre { font-family: var(--font-mono); }
+}
+
+@layer components {
+  .doc-prose h1 { @apply text-4xl font-bold mb-4 mt-2; }
+  .doc-prose h2 { @apply text-2xl font-semibold mt-12 mb-4 pb-2 border-b; }
+  .doc-prose h3 { @apply text-xl font-semibold mt-8 mb-3; }
+  .doc-prose p  { @apply text-[15px] leading-7 my-4 text-foreground/85; }
+  .doc-prose ul { @apply list-disc pl-6 my-4 space-y-2 text-[15px] text-foreground/85; }
+  .doc-prose ol { @apply list-decimal pl-6 my-4 space-y-2 text-[15px] text-foreground/85; }
+  .doc-prose a  { @apply text-primary underline-offset-4 hover:underline; }
+  .doc-prose strong { @apply font-semibold text-foreground; }
+  .doc-prose :where(p, li) > code {
+    background: var(--color-muted);
+    color: var(--color-accent);
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  .code-block {
+    background: var(--color-code-bg);
+    color: var(--color-code-fg);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.6;
+    border: 1px solid color-mix(in oklch, var(--color-code-bg) 70%, white 8%);
+    margin: 1.25rem 0;
+  }
+  .code-block .tok-c { color: oklch(0.65 0.05 200); font-style: italic; }
+  .code-block .tok-k { color: oklch(0.78 0.16 320); }
+  .code-block .tok-s { color: oklch(0.82 0.16 110); }
+  .code-block .tok-f { color: oklch(0.85 0.14 195); }
+  .callout {
+    border-left: 3px solid var(--color-primary);
+    background: color-mix(in oklch, var(--color-primary) 8%, var(--color-background));
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 1.25rem 0;
+    font-size: 14px;
+  }
+  .callout.warn {
+    border-left-color: var(--color-accent);
+    background: var(--warn);
+  }
+}
