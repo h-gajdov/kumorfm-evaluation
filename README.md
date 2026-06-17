@@ -2,7 +2,7 @@
 
 A practical, notebook-driven evaluation of **[KumoRFM](https://kumo.ai)**, Kumo AI's relational foundation model, run against a set of real relational databases — mostly clinical/medical data from PhysioNet, plus a couple of classic e-commerce schemas. The project documents how to connect KumoRFM to BigQuery, assemble a `LocalGraph` from arbitrary tables, and query it with **PQL** (Predictive Query Language) for classification, regression, and multi-horizon forecasting tasks — without any task-specific model training.
 
-The full write-up (theory, methodology, and detailed results) is available in [`Paper.docx`](./Paper.docx). This README summarizes that paper and explains how to run the accompanying notebooks and documentation site.
+The full write-up (theory, methodology, and detailed results) is available in [`Paper.pdf`](./Paper.pdf). This README summarizes that paper and explains how to run the accompanying notebooks and documentation site.
 
 ## Repository structure
 
