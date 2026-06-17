@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import OverviewPage from "./pages/OverviewPage";
 import GettingStartedPage from "./pages/GettingStartedPage";
 import RFMPlaygroundPage from "./pages/RFMPlaygroundPage";
@@ -12,7 +12,7 @@ import NotebookPage from "./pages/NotebookPage";
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<OverviewPage />} />
           <Route path="/getting-started" element={<GettingStartedPage />} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/notebooks" element={<AllNotebooksPage />} />
           <Route path="/notebooks/:slug" element={<NotebookPage />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
