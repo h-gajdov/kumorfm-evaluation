@@ -2,8 +2,9 @@ name: Deploy React App to Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths: ["docs-page/**"]
+  workflow_dispatch:
 
 permissions:
   contents: read
