@@ -23,7 +23,7 @@ export default function NotebookPage() {
           </header>
           <main className="max-w-3xl mx-auto px-6 lg:px-12 py-10 lg:py-16 doc-prose">
             <h1>Notebook not found</h1>
-            <Link to="/kumorfm-evaluation/notebooks">← All notebooks</Link>
+            <Link to="/notebooks">← All notebooks</Link>
           </main>
         </div>
       </div>
@@ -102,36 +102,25 @@ export default function NotebookPage() {
           <h2>Related pages</h2>
           <ul>
             <li>
-              <Link to="/kumorfm-evaluation//getting-started">
-                Getting Started
-              </Link>{" "}
-              — install &amp; init.
+              <Link to="/getting-started">Getting Started</Link> — install &amp;
+              init.
             </li>
             <li>
-              <Link to="/kumorfm-evaluation//connect-bigquery">
-                Connect to BigQuery
-              </Link>{" "}
-              — the loader used in this notebook.
+              <Link to="/connect-bigquery">Connect to BigQuery</Link> — the
+              loader used in this notebook.
             </li>
             <li>
-              <Link to="/kumorfm-evaluation//local-graph">
-                Building a LocalGraph
-              </Link>{" "}
-              — graph assembly &amp; linking.
+              <Link to="/local-graph">Building a LocalGraph</Link> — graph
+              assembly &amp; linking.
             </li>
             <li>
-              <Link to="/kumorfm-evaluation//predictions">
-                Predictions &amp; PQL
-              </Link>{" "}
-              — the query syntax.
+              <Link to="/predictions">Predictions &amp; PQL</Link> — the query
+              syntax.
             </li>
           </ul>
 
           <div className="not-prose mt-12 pt-6 border-t flex items-center justify-between text-sm">
-            <Link
-              to="/kumorfm-evaluation//notebooks"
-              className="text-primary hover:underline"
-            >
+            <Link to="/notebooks" className="text-primary hover:underline">
               ← All notebooks
             </Link>
             <Neighbor slug={nb.slug} />
@@ -148,7 +137,7 @@ function Neighbor({ slug }) {
   if (!next) return null;
   return (
     <Link
-      to={`/kumorfm-evaluation//notebooks/${next.slug}`}
+      to={`/notebooks/${next.slug}`}
       className="text-primary hover:underline"
     >
       Next: {next.shortTitle} →

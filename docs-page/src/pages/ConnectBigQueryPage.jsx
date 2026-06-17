@@ -119,7 +119,7 @@ patients_df = client.query("""
           <p>
             Once the data is in a <code>dict[str, pd.DataFrame]</code> with
             clean datetime columns, continue to{" "}
-            <a href="/kumorfm-evaluation/local-graph">Building a LocalGraph</a>.
+            <a href="/local-graph">Building a LocalGraph</a>.
           </p>
         </main>
       </div>

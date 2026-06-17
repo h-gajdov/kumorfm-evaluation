@@ -69,18 +69,13 @@ function RFMPlaygroundPage() {
             </p>
             <ul>
               <li>
-                <a href="/kumorfm-evaluation/notebooks/testing-kumo">
-                  testing_kumo.ipynb
-                </a>{" "}
-                — Northwind churn &amp; freight, the closest match to the PDF
+                <a href="/notebooks/testing-kumo">testing_kumo.ipynb</a> —
+                Northwind churn &amp; freight, the closest match to the PDF
                 demo.
               </li>
               <li>
-                <a href="/kumorfm-evaluation/connect-bigquery">
-                  Connect to BigQuery
-                </a>{" "}
-                — when you want to replace the demo CSVs with a real warehouse
-                source.
+                <a href="/connect-bigquery">Connect to BigQuery</a> — when you
+                want to replace the demo CSVs with a real warehouse source.
               </li>
             </ul>
           </p>

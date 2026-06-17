@@ -110,7 +110,7 @@ services_df["transfertime"] = services_df["transfertime"] + pd.to_timedelta(1, "
           <p>
             Once the graph materializes cleanly, wrap it in{" "}
             <code>rfm.KumoRFM(graph)</code> and head to{" "}
-            <a href="/kumorfm-evaluation/predictions">Predictions &amp; PQL</a>.
+            <a href="/predictions">Predictions &amp; PQL</a>.
           </p>
         </main>
       </div>

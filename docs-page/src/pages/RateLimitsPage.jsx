@@ -116,7 +116,7 @@ with ThreadPoolExecutor(max_workers=2) as ex:
             <li>
               <strong>Coincident timestamps.</strong> If many rows share the
               exact same timestamp, shift one table by a second — see{" "}
-              <a href="/kumorfm-evaluation/local-graph">LocalGraph</a>.
+              <a href="/local-graph">LocalGraph</a>.
             </li>
             <li>
               <strong>API key in source.</strong> The notebooks paste the raw
